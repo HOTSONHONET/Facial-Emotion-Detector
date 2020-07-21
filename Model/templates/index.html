@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facial Expression Detector</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    body {
+      background-image: url('../static/page_bg.jpg');
+    }
+  </style>
+  <section class="text-gray-700 body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+        src="{{ url_for('video_feed') }}">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Facial Expression Detector</h1>
+        <p class="mb-8 leading-relaxed">Reference Paper: Ivan J.Goodfellow et al, 2014, "Challenges in representation
+          learning: A report on three machine learning contests"</p>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Model Specification</h1>
+        <img width = 3000px height = 2000px src = "../static/model.png">
+      </div>
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <h2 class="title-font font-medium text-3xl text-gray-900">Adam</h2>
+            <p class="leading-relaxed">OPTIMIZER</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <h2 class="title-font font-medium text-3xl text-gray-900">4,478,727</h2>
+            <p class="leading-relaxed">TOTAL PARAMETERS</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <h2 class="title-font font-medium text-3xl text-gray-900">0.25</h2>
+            <p class="leading-relaxed">DROPOUT</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <h2 class="title-font font-medium text-3xl text-gray-900">0.0005</h2>
+            <p class="leading-relaxed">LEARNING RATE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
