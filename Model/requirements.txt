@@ -57,5 +57,5 @@ toml==0.10.2
 typing-extensions==3.7.4.3
 urllib3==1.26.6
 virtualenv==20.7.0
-Werkzeug==2.0.1
+Werkzeug==2.2.3
 wrapt==1.12.1
